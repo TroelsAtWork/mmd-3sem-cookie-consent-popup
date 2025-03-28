@@ -1,14 +1,17 @@
 "use client";
-import AccepCookieButton from "./AcceptCookieButton";
+import AcceptCookieButton from "./AcceptCookieButton";
 import CookieConsentParagraph from "./CookieConsentParagraph";
 
-const CookieConsentFooter = () => {
+const CookieConsentFooter = ({ cookieAccepted, setCookieAccepted }) => {
   return (
     <footer className="cookie-consent-popup-footer">
       <CookieConsentParagraph
         text={"We use cookies to improve your user experience!"}
       />
-      <AccepCookieButton />
+      <AcceptCookieButton
+        cookieAccepted={cookieAccepted}
+        setCookieAccepted={setCookieAccepted}
+      />
     </footer>
   );
 };

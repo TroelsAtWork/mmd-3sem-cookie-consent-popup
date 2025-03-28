@@ -1,8 +1,14 @@
 "use client";
-const AccepCookieButton = () => {
+
+const AcceptCookieButton = ({ cookieAccepted, setCookieAccepted }) => {
   return (
-    <button className="cookie-consent-popup-cta pointer">I like Cookies</button>
+    <button
+      onClick={() => setCookieAccepted(!cookieAccepted)}
+      className="cookie-consent-popup-cta pointer"
+    >
+      I like Cookies
+    </button>
   );
 };
 
-export default AccepCookieButton;
+export default AcceptCookieButton;
